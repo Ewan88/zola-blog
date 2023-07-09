@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://ewan88.github.io/zola-blog/sitemap.xml
