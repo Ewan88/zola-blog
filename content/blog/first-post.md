@@ -1,6 +1,6 @@
 +++
 title = "First Zola post"
-date = "1999-01-01"
+date = "1997-01-01"
 +++
 
 # Hello

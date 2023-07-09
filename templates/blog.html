@@ -5,22 +5,22 @@
 {% endblock title %}
 
 {% block content %}
-<article class="four-fifth center">
+<article>
     <h1>{{ section.title }}</h1>
 
     {% for page in section.pages %}
-        <article class="card">
+        <article>
             <header>
                 <h3>{{ page.title }}</h3>
             </header>
-            <div align="right">
+            <div>
                 Date: {{ page.date | date(format="%d/%m/%Y") }}
             </div>
-            <section class="center">
+            <section >
                 {{ page.summary | safe}}
             </section>
             <footer>
-                <a href="{{ page.permalink | safe}}#continue-reading" class="button">Read More</a>
+                <a hx-get="{{ page.permalink | safe}}">Read More</a>
             </footer>
         </article>
     {% endfor %}

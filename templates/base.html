@@ -5,37 +5,12 @@
     <title>{% block title %}{% endblock title %}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="picnic.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="htmx.min.js"></script>
-    <style>
-        .center {
-            margin: 0 auto;
-        }
-
-        nav {
-            position: absolute;
-        }
-
-        main {
-            padding-top: 3em;
-        }
-    </style>
 </head>
 
 <body>
-    <nav class="demo">
-        <a href="/" class="brand">
-            <span>The Location</span>
-        </a>
-
-        <input id="bmenub" type="checkbox" class="show">
-        <label for="bmenub" class="burger pseudo button">&#9776;</label>
-
-        <div class="menu">
-            <a href="/blog" class="pseudo button icon-picture">Blog</a>
-        </div>
-    </nav>
-    <main class="flex five">
+    <main>
         {% block content %}{% endblock content %}
     </main>
 </body>
