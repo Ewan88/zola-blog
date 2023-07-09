@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>{% block title %}{% endblock title %}</title>
     <meta charset="utf-8" />
+    <title>Zola Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="styles.css">
     <script src="htmx.min.js"></script>
 </head>
 
 <body>
-    <main>
-        {% block content %}{% endblock content %}
-    </main>
+    <section class="section">
+        <div class="container">
+            {% block content %}{% endblock content %}
+        </div>
+    </section>
 </body>
 
 </html>

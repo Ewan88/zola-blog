@@ -1,29 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}
-    Zola
-{% endblock title %}
-
 {% block content %}
-<article>
-    <h1>{{ section.title }}</h1>
-
+<h1 class="title">
+    {{ section.title }}
+</h1>
+<ul>
     {% for page in section.pages %}
-        <article>
-            <header>
-                <h3>{{ page.title }}</h3>
-            </header>
-            <div>
-                Date: {{ page.date | date(format="%d/%m/%Y") }}
-            </div>
-            <section >
-                {{ page.summary | safe}}
-            </section>
-            <footer>
-                <a hx-get="{{ page.permalink | safe}}">Read More</a>
-            </footer>
-        </article>
+    <li><a href={{ page.permalink | safe }}>{{ page.title }}</a></li>
     {% endfor %}
-</article>
-    
+</ul>
 {% endblock content %}
