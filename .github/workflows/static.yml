@@ -34,12 +34,12 @@ jobs:
           tool: zola@0.17.2
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
       - name: Build
         uses: shalzz/zola-deploy-action@v0.17.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
